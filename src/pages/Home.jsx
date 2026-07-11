@@ -34,37 +34,39 @@ const Home = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       {/* Hero Section */}
-      <section className="section about-hero" style={{ 
+      <section className="section" style={{ 
         minHeight: '100vh', 
         display: 'flex', 
-        alignItems: 'center',
+        alignItems: 'flex-start',
+        paddingTop: '35vh', /* Start right after the photo ends */
+        paddingBottom: '2rem',
         position: 'relative'
       }}>
-        <div className="container animate-fade-in-up" style={{ textAlign: 'center', zIndex: 1, marginTop: '2rem' }}>
-          <span style={{ color: 'var(--color-gold)', letterSpacing: '3px', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '0.5rem', display: 'block' }}>
+        <div className="container animate-fade-in-up" style={{ textAlign: 'center', zIndex: 1 }}>
+          <span style={{ color: 'var(--color-gold)', letterSpacing: '4px', fontWeight: 600, fontSize: '0.8rem', textTransform: 'uppercase', marginBottom: '0.25rem', display: 'block' }}>
             WELCOME TO
           </span>
-          <h1 style={{ color: 'var(--color-gold)', marginBottom: '0.25rem', fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 8vw, 3.5rem)', fontWeight: 700, lineHeight: 1.2 }}>
+          <h1 style={{ color: 'var(--color-gold)', marginBottom: '0.25rem', fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem, 7vw, 3.5rem)', fontWeight: 700, lineHeight: 1.1 }}>
             BEM FEB KBM UNIB 2026
           </h1>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: '#FFF8D6', fontSize: 'clamp(1.2rem, 3vw, 1.8rem)', fontWeight: 400, marginBottom: '2rem' }}>
+          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: '#FFF8D6', fontSize: 'clamp(1.1rem, 2.5vw, 1.8rem)', fontWeight: 400, marginBottom: '1.25rem' }}>
             Gerakan Kolektif Mahasiswa
           </h2>
-          <p style={{ fontSize: 'clamp(0.9rem, 2vw, 1.1rem)', color: 'var(--color-gray)', maxWidth: '700px', margin: '0 auto 2.5rem auto', fontWeight: 300, lineHeight: 1.8 }}>
+          <p style={{ fontSize: 'clamp(0.85rem, 2vw, 1.1rem)', color: 'var(--color-gray)', maxWidth: '700px', margin: '0 auto 1.5rem auto', fontWeight: 300, lineHeight: 1.6 }}>
             BEM FEB KBM UNIB adalah organisasi kemahasiswaan yang menjalankan fungsi eksekutif di lingkungan Fakultas Ekonomi dan Bisnis, Universitas Bengkulu. Kami bertujuan untuk aktif, responsif, dan konstruktif melalui berbagai program kerja, pengabdian, dan pelayanan.
           </p>
-          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '4rem' }}>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
             <Link to="/about" style={{ 
               background: 'linear-gradient(135deg, rgba(212,177,90,0.9), rgba(229,194,107,0.7))',
               color: 'var(--color-black)',
               fontWeight: 600,
               display: 'inline-flex', 
               alignItems: 'center', 
-              gap: '0.75rem', 
-              padding: '0.8rem 2rem', 
-              fontSize: '1rem', 
+              gap: '0.5rem', 
+              padding: '0.75rem 2rem', 
+              fontSize: '0.95rem', 
               borderRadius: '50px', 
-              boxShadow: '0 10px 25px rgba(212,177,90,0.3)',
+              boxShadow: '0 8px 20px rgba(212,177,90,0.2)',
               textDecoration: 'none'
             }}>
               Our Programs
