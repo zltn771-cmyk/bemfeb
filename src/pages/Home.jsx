@@ -41,20 +41,6 @@ const Home = () => {
         position: 'relative'
       }}>
         <div className="container animate-fade-in-up" style={{ textAlign: 'center', zIndex: 1 }}>
-          <img 
-            src="/logo.png" 
-            alt="Logo Kabinet Karsa Adhiyasa" 
-            className="animate-float"
-            style={{ 
-              height: '180px', 
-              width: 'auto',
-              marginBottom: '2rem',
-              filter: 'drop-shadow(0 10px 30px rgba(201,154,60,0.2))'
-            }} 
-            onError={(e) => {
-              e.target.style.display = 'none'; // Sembunyikan jika file belum ada
-            }}
-          />
           <h1 className="text-shimmer heading-display" style={{ marginBottom: '1.5rem' }}>
             BEM FEB KBM UNIB 2026
           </h1>
@@ -68,6 +54,40 @@ const Home = () => {
             <Link to="/student-info" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem' }}>
               Info Mahasiswa
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Identitas Kabinet */}
+      <section className="section" style={{ background: '#FDFBF7', color: 'var(--color-black)' }}>
+        <div className="container">
+          <div className="grid grid-cols-2" style={{ alignItems: 'center', gap: '4rem' }}>
+            <div className="animate-fade-in-up delay-100" style={{ textAlign: 'center' }}>
+              <img 
+                src="/kabinet-karsa-adhiyasa.jpg" 
+                alt="Logo Kabinet Karsa Adhiyasa" 
+                className="animate-float"
+                style={{ 
+                  width: '100%', 
+                  maxWidth: '450px', 
+                  height: 'auto', 
+                  mixBlendMode: 'multiply',
+                  filter: 'drop-shadow(0 20px 40px rgba(201,154,60,0.15))'
+                }} 
+              />
+            </div>
+            <div className="animate-fade-in-up delay-200">
+              <h2 style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', marginBottom: '1rem', color: 'var(--color-black)', fontWeight: '800' }}>
+                Kabinet <span style={{ color: 'var(--color-gold)' }}>Karsa Adhiyasa</span>
+              </h2>
+              <div className="divider" style={{ width: '80px', margin: '0 0 1.5rem 0', background: 'var(--color-gold)' }}></div>
+              <p style={{ fontSize: '1.15rem', lineHeight: 1.8, color: '#444', marginBottom: '1.5rem' }}>
+                <strong>"Karsa"</strong> melambangkan kehendak yang kuat, dedikasi, dan cita-cita luhur mahasiswa untuk membawa perubahan positif yang berdampak nyata.
+              </p>
+              <p style={{ fontSize: '1.15rem', lineHeight: 1.8, color: '#444' }}>
+                <strong>"Adhiyasa"</strong> merepresentasikan sinergi, ketangguhan, keadilan, dan keberanian dalam mengabdi kepada nusa, bangsa, serta almamater Universitas Bengkulu tercinta.
+              </p>
+            </div>
           </div>
         </div>
       </section>
