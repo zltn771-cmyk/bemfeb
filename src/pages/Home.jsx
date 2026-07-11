@@ -59,7 +59,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2" style={{ maxWidth: '800px', margin: '0 auto', gap: '1.5rem' }}>
+          <div className="grid grid-cols-2 grid-cols-2-mobile-keep" style={{ maxWidth: '800px', margin: '0 auto', gap: '1.5rem' }}>
             <div className="glass-card" style={{ padding: '1.5rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderRadius: '16px' }}>
               <div style={{ textAlign: 'left' }}>
                 <h3 style={{ fontSize: '1.8rem', color: 'var(--color-white)', margin: 0 }}>120+</h3>

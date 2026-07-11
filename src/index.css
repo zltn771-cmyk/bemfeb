@@ -324,18 +324,23 @@ a:hover {
 
 @media (max-width: 992px) {
   .grid-cols-2, .grid-cols-3 { grid-template-columns: 1fr; }
+  .grid-cols-2-mobile-keep { grid-template-columns: repeat(2, 1fr) !important; }
   .section { padding: 4rem 0; }
 }
 
 @media (max-width: 768px) {
-  .section { padding: 3rem 0; }
-  .grid { gap: 1.5rem; }
-  .glass-card { padding: 2rem 1.5rem; border-radius: 16px; }
-  h1.heading-display { font-size: clamp(2rem, 8vw, 2.5rem); }
+  .section { padding: 2.5rem 0; }
+  .grid { gap: 1rem; }
+  .glass-card { padding: 1.25rem 1rem; border-radius: 12px; }
+  h1.heading-display { font-size: clamp(1.5rem, 6vw, 2rem); }
+  h2.heading-section { font-size: 1.4rem; }
+  h3 { font-size: 1.1rem !important; }
+  p { font-size: 0.9rem !important; line-height: 1.5; }
   .container { width: 92%; }
 }
 
 @media (max-width: 480px) {
-  .glass-card { padding: 1.5rem 1rem; }
-  .navbar-text-mobile-hide { display: none !important; }
+  .glass-card { padding: 1rem 0.75rem; }
+  .grid { gap: 0.75rem; }
+  .btn-gold { padding: 0.75rem 1.5rem !important; font-size: 0.9rem !important; }
 }
