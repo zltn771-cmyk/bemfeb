@@ -114,7 +114,7 @@ const MemberCard = ({ member, delay }) => {
         right: '20px',
         zIndex: 3,
         textAlign: 'center',
-        padding: '1rem',
+        padding: '0.5rem',
         borderTop: '1px solid rgba(212, 175, 55, 0.3)',
         borderBottom: '1px solid rgba(212, 175, 55, 0.3)',
         backdropFilter: 'blur(5px)',
@@ -124,12 +124,13 @@ const MemberCard = ({ member, delay }) => {
         opacity: 0.9
       }} className="team-info">
         <h3 style={{ 
-          fontSize: 'clamp(0.85rem, 1.5vw, 1rem)', 
+          fontSize: 'clamp(0.5rem, 2.5vw, 1rem)', 
           margin: 0, 
           color: 'var(--color-gold)', 
           textTransform: 'uppercase', 
-          letterSpacing: '1px',
-          fontWeight: 700
+          letterSpacing: '0.5px',
+          fontWeight: 700,
+          lineHeight: 1.2
         }}>
           {member.role}
         </h3>
@@ -255,7 +256,7 @@ const About = () => {
                   style={{ 
                     display: 'grid', 
                     gridTemplateColumns: `repeat(${colCount}, 1fr)`, 
-                    gap: '2.5rem', 
+                    gap: 'clamp(0.5rem, 2vw, 2.5rem)', 
                     width: '100%', 
                     maxWidth: colCount === 2 ? '700px' : '900px' 
                   }}
@@ -284,19 +285,6 @@ const About = () => {
         }
         .team-card:hover .team-border {
           border-color: rgba(212, 175, 55, 0.4);
-        }
-        @media (max-width: 768px) {
-          div[style*="grid-template-columns: repeat(4, 1fr)"],
-          div[style*="grid-template-columns: repeat(3, 1fr)"],
-          div[style*="grid-template-columns: repeat(2, 1fr)"] {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-        }
-        @media (max-width: 480px) {
-          div[style*="grid-template-columns: repeat(3, 1fr)"],
-          div[style*="grid-template-columns: repeat(2, 1fr)"] {
-            grid-template-columns: 1fr !important;
-          }
         }
       `}</style>
     </div>
