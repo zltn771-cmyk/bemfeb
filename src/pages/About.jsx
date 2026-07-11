@@ -173,10 +173,11 @@ const About = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="section bg-charcoal">
-        <div className="container">
+      <section className="section bg-charcoal" style={{ overflow: 'hidden', position: 'relative' }}>
+        <div className="glow-orb" style={{ top: '-15%', right: '-15%', animationDelay: '-3s' }}></div>
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="grid grid-cols-2">
-            <Reveal delay={100} direction="left" className="glass-card">
+            <Reveal delay={100} direction="left" className="glass-card card-float">
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                 <Lightbulb size={32} color="var(--color-gold)" />
                 <h2 style={{ marginBottom: 0 }}>Visi</h2>
@@ -186,7 +187,7 @@ const About = () => {
               </p>
             </Reveal>
             
-            <Reveal delay={200} direction="right" className="glass-card">
+            <Reveal delay={200} direction="right" className="glass-card card-float" style={{ animationDelay: '-2s' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                 <Target size={32} color="var(--color-gold)" />
                 <h2 style={{ marginBottom: 0 }}>Misi</h2>

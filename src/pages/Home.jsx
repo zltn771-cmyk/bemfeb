@@ -92,9 +92,11 @@ const Home = () => {
       </section>
 
       {/* Vision & Mission Summary */}
-      <section className="section bg-charcoal">
-        <div className="container">
-          <Reveal direction="up" className="glass-card" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
+      <section className="section bg-charcoal" style={{ overflow: 'hidden', position: 'relative' }}>
+        <div className="glow-orb" style={{ top: '-10%', left: '-10%' }}></div>
+        <div className="glow-orb" style={{ bottom: '-10%', right: '-10%', animationDelay: '-7s' }}></div>
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <Reveal direction="up" className="glass-card card-float" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
             <h2 className="text-gold heading-section">Visi Kami</h2>
             <p style={{ fontSize: '1.25rem', color: 'var(--color-text-main)', fontStyle: 'italic', marginBottom: '2.5rem', lineHeight: 1.8 }}>
               "BEM FEB KBM UNIB sebagai gerakan kolektif mahasiswa yang adaptif, berprestasi, dan berdampak bagi kampus serta masyarakat."
@@ -123,7 +125,7 @@ const Home = () => {
                   key={index} 
                   delay={index * 100} 
                   direction="up"
-                  className={`glass-card ${isLarge ? 'bento-large' : ''}`}
+                  className={`glass-card card-float ${isLarge ? 'bento-large' : ''}`}
                   style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
                 >
                   <div style={{ marginBottom: '1.5rem', flexShrink: 0 }}>{prog.icon}</div>
