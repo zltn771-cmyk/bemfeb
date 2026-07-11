@@ -114,7 +114,7 @@ const MemberCard = ({ member, delay }) => {
         right: '20px',
         zIndex: 3,
         textAlign: 'center',
-        padding: '0.5rem',
+        padding: 'var(--member-padding, 0.75rem)',
         borderTop: '1px solid rgba(212, 175, 55, 0.3)',
         borderBottom: '1px solid rgba(212, 175, 55, 0.3)',
         backdropFilter: 'blur(5px)',
@@ -124,13 +124,14 @@ const MemberCard = ({ member, delay }) => {
         opacity: 0.9
       }} className="team-info">
         <h3 style={{ 
-          fontSize: 'clamp(0.5rem, 2.5vw, 1rem)', 
+          fontSize: 'var(--member-text-size, clamp(0.75rem, 1.5vw, 1rem))', 
           margin: 0, 
           color: 'var(--color-gold)', 
           textTransform: 'uppercase', 
           letterSpacing: '0.5px',
           fontWeight: 700,
-          lineHeight: 1.2
+          lineHeight: 1.15,
+          wordBreak: 'break-word'
         }}>
           {member.role}
         </h3>
@@ -285,6 +286,12 @@ const About = () => {
         }
         .team-card:hover .team-border {
           border-color: rgba(212, 175, 55, 0.4);
+        }
+        @media (max-width: 480px) {
+          .team-card {
+            --member-text-size: 0.5rem;
+            --member-padding: 0.25rem;
+          }
         }
       `}</style>
     </div>
