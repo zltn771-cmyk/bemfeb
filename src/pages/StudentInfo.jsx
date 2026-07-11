@@ -35,7 +35,7 @@ const StudentInfo = () => {
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.borderColor = 'rgba(212, 177, 90, 0.15)';
               }}
             >
               <div style={{ background: 'rgba(212, 175, 55, 0.1)', padding: '2rem', borderRadius: '50%', marginBottom: '1.5rem' }}>
@@ -71,7 +71,7 @@ const StudentInfo = () => {
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.borderColor = 'rgba(212, 177, 90, 0.15)';
               }}
             >
               <div style={{ background: 'rgba(212, 175, 55, 0.1)', padding: '2rem', borderRadius: '50%', marginBottom: '1.5rem' }}>

@@ -52,7 +52,7 @@ const MemberCard = ({ member, delay }) => {
         borderRadius: '20px',
         overflow: 'hidden',
         aspectRatio: '3/4',
-        background: 'var(--color-charcoal)',
+        background: 'var(--color-bg-alt)',
         boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
         cursor: 'pointer',
         width: '100%',
@@ -77,7 +77,7 @@ const MemberCard = ({ member, delay }) => {
         <div style={{
           width: '100%',
           height: '100%',
-          background: 'linear-gradient(135deg, var(--color-charcoal), var(--color-black))',
+          background: 'linear-gradient(135deg, var(--color-bg-alt), var(--color-black))',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
