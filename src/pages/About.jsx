@@ -41,7 +41,7 @@ const values = [
   { name: 'Berdampak', icon: <Target size={24} color="var(--color-black)" /> }
 ];
 
-const MemberCard = ({ member, delay }) => {
+const MemberCard = ({ member, delay, colCount }) => {
   const [imgError, setImgError] = React.useState(false);
 
   return (
@@ -124,7 +124,7 @@ const MemberCard = ({ member, delay }) => {
         opacity: 0.9
       }} className="team-info">
         <h3 style={{ 
-          fontSize: 'var(--member-text-size, clamp(0.75rem, 1.5vw, 1rem))', 
+          fontSize: colCount === 3 ? 'var(--member-text-size-3, clamp(0.6rem, 1.2vw, 0.9rem))' : 'var(--member-text-size-2, clamp(0.75rem, 1.5vw, 1rem))', 
           margin: 0, 
           color: 'var(--color-gold)', 
           textTransform: 'uppercase', 
@@ -264,7 +264,7 @@ const About = () => {
                 >
                   {row.map((member) => {
                     delayCounter += 100;
-                    return <MemberCard key={member.id} member={member} delay={delayCounter} />
+                    return <MemberCard key={member.id} member={member} delay={delayCounter} colCount={colCount} />
                   })}
                 </div>
               );
@@ -289,9 +289,10 @@ const About = () => {
         }
         @media (max-width: 480px) {
           .team-card {
-            --member-text-size: 0.6rem;
-            --member-padding: 0.3rem;
-            --member-inset: 5px;
+            --member-text-size-2: 0.65rem;
+            --member-text-size-3: 0.45rem;
+            --member-padding: 0.2rem;
+            --member-inset: 2px;
           }
         }
       `}</style>
