@@ -17,7 +17,7 @@ const orgRows = [
   [
     { role: 'Biro Internal', id: '15hpiQ6CbMqbTrcviUKxUXn5uy5d5nCDp' },
     { role: 'Dinas PSDM', id: '1Ti1zWzID0vWa4sUmkDQlRpjkSvJ1zaL0' },
-    { role: 'Dinas Adkesma', id: '1FnTt2z9rcNKP2bFdOjwvh76s4lYn-o8v' }
+    { role: 'Dinas Advokesma', id: '1FnTt2z9rcNKP2bFdOjwvh76s4lYn-o8v' }
   ],
   // Row 4 (3)
   [
