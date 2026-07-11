@@ -322,7 +322,12 @@ a:hover {
 
 /* Clean Layouts */
 .home-hero {
-  align-items: center; /* Centered vertically on desktop */
+  align-items: flex-start !important; 
+  padding-top: 55vh; /* Push text down below the faces on desktop */
+}
+
+.about-hero {
+  padding-top: 50vh; /* Push text down below the faces on desktop */
 }
 
 .section {
