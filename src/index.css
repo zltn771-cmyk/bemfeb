@@ -304,6 +304,10 @@ a:hover {
 }
 
 /* Clean Layouts */
+.home-hero {
+  align-items: center; /* Centered vertically on desktop */
+}
+
 .section {
   padding: 5rem 0; /* Tighter padding for a more compact, less empty feel */
   position: relative;
@@ -352,7 +356,12 @@ a:hover {
   }
 
   .about-hero {
-    padding-top: 30vh !important;
+    padding-top: 22vh !important; /* Tighter gap under the photo */
+  }
+  
+  .home-hero {
+    align-items: flex-start !important;
+    padding-top: 22vh !important; /* Tighter gap under the photo */
   }
 
   .section { padding: 2.5rem 0; }
