@@ -44,16 +44,16 @@ const Home = () => {
         position: 'relative'
       }}>
         <div className="container animate-fade-in-up" style={{ textAlign: 'left', zIndex: 1 }}>
-          <span style={{ color: 'var(--color-gold)', letterSpacing: '4px', fontWeight: 600, fontSize: '0.8rem', textTransform: 'uppercase', marginBottom: '0.25rem', display: 'block' }}>
+          <span style={{ color: 'var(--color-gold)', letterSpacing: '4px', fontWeight: 600, fontSize: '0.8rem', textTransform: 'uppercase', marginBottom: '0.25rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
             WELCOME TO
           </span>
-          <h1 style={{ color: 'var(--color-gold)', marginBottom: '0.25rem', fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem, 7vw, 4.5rem)', fontWeight: 700, lineHeight: 1.1 }}>
+          <h1 style={{ color: 'var(--color-gold)', marginBottom: '0.25rem', fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem, 7vw, 4.5rem)', fontWeight: 700, lineHeight: 1.1, textShadow: '0 4px 10px rgba(0,0,0,0.9)' }}>
             BEM FEB KBM UNIB 2026
           </h1>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: '#FFF8D6', fontSize: 'clamp(1.1rem, 2.5vw, 2.2rem)', fontWeight: 400, marginBottom: '1.25rem' }}>
+          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: '#FFF8D6', fontSize: 'clamp(1.1rem, 2.5vw, 2.2rem)', fontWeight: 400, marginBottom: '1.25rem', textShadow: '0 3px 8px rgba(0,0,0,0.8)' }}>
             Gerakan Kolektif Mahasiswa
           </h2>
-          <p style={{ fontSize: 'clamp(0.85rem, 2vw, 1.2rem)', color: 'var(--color-gray)', maxWidth: '700px', margin: '0 0 1.5rem 0', fontWeight: 300, lineHeight: 1.6 }}>
+          <p style={{ fontSize: 'clamp(0.85rem, 2vw, 1.2rem)', color: 'var(--color-white)', maxWidth: '700px', margin: '0 0 1.5rem 0', fontWeight: 400, lineHeight: 1.6, textShadow: '0 2px 6px rgba(0,0,0,0.9)' }}>
             BEM FEB KBM UNIB adalah organisasi kemahasiswaan yang menjalankan fungsi eksekutif di lingkungan Fakultas Ekonomi dan Bisnis, Universitas Bengkulu. Kami bertujuan untuk aktif, responsif, dan konstruktif melalui berbagai program kerja, pengabdian, dan pelayanan.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start', flexWrap: 'wrap', marginBottom: '1rem' }}>

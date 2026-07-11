@@ -99,7 +99,6 @@ function App() {
       }}></div>
 
       <div className="bg-animated"></div>
-      <div className="bg-overlay"></div>
       
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative', zIndex: 1 }}>
         <Navbar />
