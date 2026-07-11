@@ -36,8 +36,7 @@ const Home = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       {/* Hero Section */}
-      <section className="section" style={{ 
-        minHeight: '100vh', 
+      <section className="home-hero-section" style={{ 
         display: 'flex', 
         alignItems: 'center',
         justifyContent: 'center',

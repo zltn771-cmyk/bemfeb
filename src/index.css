@@ -47,11 +47,27 @@ a, button, input, select, textarea {
 .bg-animated {
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 100vh; /* Allow full height so photo text isn't cut off */
+  height: 100vh; /* Default mobile fallback */
   background-image: url('https://lh3.googleusercontent.com/d/1NleaBg0Hhi9nvickD9WBUhEo-HzdAMYS=w1920?authuser=0');
   background-size: cover;
-  background-position: top center; /* Keep top anchored so bottom text is visible */
+  background-position: top center; 
   z-index: -2;
+}
+
+.home-hero-section {
+  min-height: 100vh;
+}
+
+/* On Desktop, lock to 16:9 aspect ratio so the photo never crops/gaps */
+@media (min-width: 769px) {
+  .home-hero-section {
+    min-height: unset;
+    height: 56.25vw;
+  }
+  .bg-animated {
+    height: 56.25vw !important;
+    background-position: bottom center !important; /* Ensure the baked-in text stays visible */
+  }
 }
 
 
