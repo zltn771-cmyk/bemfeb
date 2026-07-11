@@ -37,47 +37,8 @@ const Navbar = () => {
       padding: scrolled ? '1rem 0' : '1.5rem 0'
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link to="/" style={{ 
-            fontSize: '1.2rem', 
-            fontWeight: 'bold', 
-            color: 'var(--color-gold)', 
-            letterSpacing: '1px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '1rem'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <img 
-                src="/icons.svg" 
-                alt="Logo BEM FEB" 
-                style={{ 
-                  height: '40px', 
-                  width: 'auto',
-                  filter: 'drop-shadow(0 0 10px rgba(212,177,90,0.3))'
-                }} 
-                onError={(e) => e.target.style.display = 'none'}
-              />
-              <img 
-                src="/kabinet-karsa-adhiyasa.jpg" 
-                alt="Logo Kabinet Karsa Adhiyasa" 
-                style={{ 
-                  height: '40px', 
-                  width: '40px',
-                  objectFit: 'cover',
-                  borderRadius: '50%',
-                  border: '1px solid var(--color-gold)',
-                  boxShadow: '0 0 10px rgba(212,177,90,0.3)'
-                }} 
-                onError={(e) => e.target.style.display = 'none'}
-              />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }} className="navbar-text-mobile-hide">
-              <span className="text-shimmer" style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.2' }}>BEM FEB UNIB</span>
-              <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', fontWeight: 400 }}>Kabinet Karsa Adhiyasa</span>
-            </div>
-          </Link>
-
-        {/* Desktop Menu */}
+        
+        {/* Left side: Desktop Menu & Mobile Hamburger */}
         <div style={{ display: 'flex', gap: '2rem' }} className="desktop-menu">
           {navLinks.map((link) => (
             <Link 
@@ -93,10 +54,53 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button - simplified styling inline for now */}
+        {/* Mobile Menu Button on Left */}
         <div className="mobile-menu-btn" style={{ display: 'none', cursor: 'pointer' }} onClick={toggleMenu}>
           {isOpen ? <X color="var(--color-gold)" /> : <Menu color="var(--color-gold)" />}
         </div>
+
+        {/* Right side: Logo */}
+        <Link to="/" style={{ 
+          fontSize: '1rem', 
+          fontWeight: 'bold', 
+          color: 'var(--color-gold)', 
+          letterSpacing: '1px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.75rem',
+          textAlign: 'right'
+        }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+            <span className="text-shimmer" style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.2' }}>BEM FEB UNIB</span>
+            <span style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontWeight: 400 }}>Kabinet Karsa Adhiyasa</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img 
+              src="/kabinet-karsa-adhiyasa.jpg" 
+              alt="Logo Kabinet Karsa Adhiyasa" 
+              style={{ 
+                height: '38px', 
+                width: '38px',
+                objectFit: 'cover',
+                borderRadius: '50%',
+                border: '1px solid var(--color-gold)',
+                boxShadow: '0 0 10px rgba(212,177,90,0.3)'
+              }} 
+              onError={(e) => e.target.style.display = 'none'}
+            />
+            <img 
+              src="/icons.svg" 
+              alt="Logo BEM FEB" 
+              style={{ 
+                height: '38px', 
+                width: 'auto',
+                filter: 'drop-shadow(0 0 10px rgba(212,177,90,0.3))'
+              }} 
+              onError={(e) => e.target.style.display = 'none'}
+            />
+          </div>
+        </Link>
+
       </div>
 
       {/* Mobile Menu Dropdown */}

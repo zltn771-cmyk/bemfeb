@@ -38,10 +38,16 @@ body {
 }
 
 /* Cinematic Global Animated Background */
+@keyframes slowPan {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.1) translate(-2%, -2%); }
+}
+
 .bg-animated {
   position: fixed;
-  top: -5%; left: -5%; right: -5%; bottom: -5%;
-  width: 110vw; height: 110vh;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh; /* Fallback */
+  height: 100dvh; /* Modern mobile height */
   background-image: url('https://lh3.googleusercontent.com/d/1NleaBg0Hhi9nvickD9WBUhEo-HzdAMYS=w1920?authuser=0');
   background-size: cover;
   background-position: center;
