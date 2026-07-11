@@ -287,12 +287,18 @@ const About = () => {
         .team-card:hover .team-border {
           border-color: rgba(212, 175, 55, 0.4);
         }
+        @media (max-width: 768px) {
+          .team-card .team-info {
+            transform: translateY(0) !important;
+            opacity: 1 !important;
+          }
+        }
         @media (max-width: 480px) {
           .team-card {
-            --member-text-size-2: 0.65rem;
-            --member-text-size-3: 0.45rem;
-            --member-padding: 0.2rem;
-            --member-inset: 2px;
+            --member-text-size-2: 0.75rem;
+            --member-text-size-3: 0.55rem;
+            --member-padding: 0.25rem;
+            --member-inset: 5px;
           }
         }
       `}</style>
