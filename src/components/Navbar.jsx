@@ -67,12 +67,14 @@ const Navbar = () => {
           letterSpacing: '1px',
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'flex-end',
+          flex: 1,
           gap: '0.75rem',
           textAlign: 'right'
         }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-            <span className="text-shimmer" style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.2' }}>BEM FEB UNIB</span>
-            <span style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontWeight: 400 }}>Kabinet Karsa Adhiyasa</span>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }} className="nav-text-container">
+            <span className="text-shimmer" style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.2', whiteSpace: 'nowrap' }}>BEM FEB UNIB</span>
+            <span className="nav-subtext" style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontWeight: 400, whiteSpace: 'nowrap' }}>Kabinet Karsa Adhiyasa</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <img 
@@ -137,6 +139,10 @@ const Navbar = () => {
         @media (max-width: 768px) {
           .desktop-menu { display: none !important; }
           .mobile-menu-btn { display: block !important; }
+        }
+        @media (max-width: 480px) {
+          .nav-subtext { display: none !important; }
+          .nav-text-container span.text-shimmer { font-size: 0.95rem !important; }
         }
       `}</style>
     </nav>

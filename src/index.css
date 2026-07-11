@@ -45,9 +45,9 @@ body {
 
 .bg-animated {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100vw; height: 100vh; /* Fallback */
-  height: 100dvh; /* Modern mobile height */
+  top: -5vh; left: -5vw; right: -5vw; bottom: -5vh;
+  width: 110vw; height: 110vh; /* Fallback */
+  height: 110dvh; /* Modern mobile height to prevent address bar gaps */
   background-image: url('https://lh3.googleusercontent.com/d/1NleaBg0Hhi9nvickD9WBUhEo-HzdAMYS=w1920?authuser=0');
   background-size: cover;
   background-position: center;
@@ -58,8 +58,8 @@ body {
 .bg-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  /* Kurangi opacity agar foto latar belakang lebih terlihat jelas */
-  background: linear-gradient(to bottom, rgba(24,24,27,0.65) 0%, rgba(9,9,11,0.88) 100%);
+  /* Kurangi opacity lagi agar foto sangat jelas terlihat */
+  background: linear-gradient(to bottom, rgba(24,24,27,0.4) 0%, rgba(9,9,11,0.7) 100%);
   z-index: -1;
 }
 
