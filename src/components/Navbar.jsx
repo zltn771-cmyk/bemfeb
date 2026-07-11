@@ -71,7 +71,7 @@ const Navbar = () => {
                 onError={(e) => e.target.style.display = 'none'}
               />
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', flexDirection: 'column' }} className="navbar-text-mobile-hide">
               <span className="text-shimmer" style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.2' }}>BEM FEB UNIB</span>
               <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', fontWeight: 400 }}>Kabinet Karsa Adhiyasa</span>
             </div>

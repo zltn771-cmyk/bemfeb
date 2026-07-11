@@ -293,7 +293,8 @@ const About = () => {
           }
         }
         @media (max-width: 480px) {
-          div[style*="grid-template-columns: repeat(2, 1fr) !important"] {
+          div[style*="grid-template-columns: repeat(3, 1fr)"],
+          div[style*="grid-template-columns: repeat(2, 1fr)"] {
             grid-template-columns: 1fr !important;
           }
         }
