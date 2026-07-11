@@ -305,7 +305,7 @@ a:hover {
 
 /* Clean Layouts */
 .section {
-  padding: 8rem 0; /* Increase from 6rem to 8rem for more premium spacing */
+  padding: 5rem 0; /* Tighter padding for a more compact, less empty feel */
   position: relative;
 }
 
@@ -317,14 +317,25 @@ a:hover {
 
 .grid {
   display: grid;
-  gap: 3rem; /* Increase from 2rem to 3rem */
+  gap: 2rem; 
 }
 .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
 
+/* Premium Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.bento-large {
+  grid-column: span 2;
+}
+
 @media (max-width: 992px) {
   .grid-cols-2, .grid-cols-3 { grid-template-columns: 1fr; }
   .grid-cols-2-mobile-keep { grid-template-columns: repeat(2, 1fr) !important; }
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
   .section { padding: 4rem 0; }
 }
 
@@ -346,6 +357,8 @@ a:hover {
 
   .section { padding: 2.5rem 0; }
   .grid { gap: 1rem; }
+  .bento-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .bento-large { grid-column: span 1; }
   .glass-card { padding: 1.25rem 1rem; border-radius: 12px; }
   h1.heading-display { font-size: clamp(1.5rem, 6vw, 2rem); }
   h2.heading-section { font-size: 1.4rem; }

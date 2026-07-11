@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Briefcase, MessageSquare, Palette, Mic, HeartHandshake, Users, Flag } from 'lucide-react';
+import Reveal from '../components/Reveal';
 
 const programs = [
   {
@@ -73,7 +74,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 grid-cols-2-mobile-keep" style={{ maxWidth: '800px', margin: '0 auto', gap: '1.5rem' }}>
+          <Reveal delay={200} className="grid grid-cols-2 grid-cols-2-mobile-keep" style={{ maxWidth: '800px', margin: '0 auto', gap: '1.5rem' }}>
             <div className="glass-card" style={{ padding: '1.5rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderRadius: '16px' }}>
               <div style={{ textAlign: 'left' }}>
                 <h3 style={{ fontSize: '1.8rem', color: 'var(--color-white)', margin: 0 }}>120+</h3>
@@ -88,14 +89,14 @@ const Home = () => {
               </div>
               <Flag size={36} color="var(--color-gold)" strokeWidth={1.5} />
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Vision & Mission Summary */}
       <section className="section bg-charcoal">
         <div className="container">
-          <div className="glass-card animate-fade-in-up delay-200" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
+          <Reveal direction="up" className="glass-card" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
             <h2 className="text-gold heading-section">Visi Kami</h2>
             <p style={{ fontSize: '1.25rem', color: 'var(--color-text-main)', fontStyle: 'italic', marginBottom: '2.5rem', lineHeight: 1.8 }}>
               "BEM FEB KBM UNIB sebagai gerakan kolektif mahasiswa yang adaptif, berprestasi, dan berdampak bagi kampus serta masyarakat."
@@ -103,35 +104,36 @@ const Home = () => {
             <Link to="/about" className="btn-outline">
               Baca Misi Selengkapnya
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Flagship Programs */}
       <section className="section" style={{ background: 'var(--color-black)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="animate-fade-in-up delay-100">
+          <Reveal direction="down" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 className="text-gold" style={{ fontSize: '2.5rem' }}>Program Unggulan</h2>
             <div className="divider" style={{ width: '100px', margin: '1rem auto' }}></div>
-          </div>
+          </Reveal>
           
-          <div className="grid grid-cols-3">
-            {programs.slice(0, 3).map((prog, index) => (
-              <div key={index} className={`glass-card animate-fade-in-up delay-${(index+1)*100}`}>
-                <div style={{ marginBottom: '1.5rem' }}>{prog.icon}</div>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{prog.title}</h3>
-                <p>{prog.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-2" style={{ marginTop: '2rem', maxWidth: '800px', margin: '2rem auto 0 auto' }}>
-            {programs.slice(3, 5).map((prog, index) => (
-              <div key={index} className={`glass-card animate-fade-in-up delay-${(index+4)*100}`}>
-                <div style={{ marginBottom: '1.5rem' }}>{prog.icon}</div>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{prog.title}</h3>
-                <p>{prog.desc}</p>
-              </div>
-            ))}
+          <div className="bento-grid">
+            {programs.map((prog, index) => {
+              // Asymmetrical Layout: index 0 and 3 are large
+              const isLarge = index === 0 || index === 3;
+              return (
+                <Reveal 
+                  key={index} 
+                  delay={index * 100} 
+                  direction="up"
+                  className={`glass-card ${isLarge ? 'bento-large' : ''}`}
+                  style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
+                >
+                  <div style={{ marginBottom: '1.5rem', flexShrink: 0 }}>{prog.icon}</div>
+                  <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', flexShrink: 0 }}>{prog.title}</h3>
+                  <p style={{ flexGrow: 1, margin: 0 }}>{prog.desc}</p>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>

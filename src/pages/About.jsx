@@ -1,5 +1,6 @@
 import React from 'react';
 import { Target, Lightbulb, Users, Shield, TrendingUp, Zap } from 'lucide-react';
+import Reveal from '../components/Reveal';
 
 const orgRows = [
   // Row 1 (2)
@@ -45,8 +46,10 @@ const MemberCard = ({ member, delay, colCount }) => {
   const [imgError, setImgError] = React.useState(false);
 
   return (
-    <div 
-      className={`animate-fade-in-up team-card`}
+    <Reveal 
+      direction="up"
+      delay={delay}
+      className={`team-card`}
       style={{
         position: 'relative',
         borderRadius: '20px',
@@ -55,8 +58,7 @@ const MemberCard = ({ member, delay, colCount }) => {
         background: 'var(--color-bg-alt)',
         boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
         cursor: 'pointer',
-        width: '100%',
-        animationDelay: `${delay}ms`
+        width: '100%'
       }}
     >
       {!imgError ? (
@@ -149,7 +151,7 @@ const MemberCard = ({ member, delay, colCount }) => {
         transition: 'border-color 0.4s ease',
         pointerEvents: 'none'
       }} className="team-border"></div>
-    </div>
+    </Reveal>
   );
 };
 
@@ -174,7 +176,7 @@ const About = () => {
       <section className="section bg-charcoal">
         <div className="container">
           <div className="grid grid-cols-2">
-            <div className="glass-card animate-fade-in-up delay-100">
+            <Reveal delay={100} direction="left" className="glass-card">
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                 <Lightbulb size={32} color="var(--color-gold)" />
                 <h2 style={{ marginBottom: 0 }}>Visi</h2>
@@ -182,9 +184,9 @@ const About = () => {
               <p style={{ fontSize: '1.2rem', fontStyle: 'italic', lineHeight: 1.8 }}>
                 "BEM FEB KBM UNIB sebagai gerakan kolektif mahasiswa yang adaptif, berprestasi, dan berdampak bagi kampus serta masyarakat."
               </p>
-            </div>
+            </Reveal>
             
-            <div className="glass-card animate-fade-in-up delay-200">
+            <Reveal delay={200} direction="right" className="glass-card">
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                 <Target size={32} color="var(--color-gold)" />
                 <h2 style={{ marginBottom: 0 }}>Misi</h2>
@@ -195,7 +197,7 @@ const About = () => {
                 <li>Meningkatkan kapasitas mahasiswa FEB melalui program pengembangan akademik, nonakademik, dan karier yang terstruktur, inovatif, dan relevan dengan tantangan masa depan.</li>
                 <li>Mengimplementasikan program pengabdian kepada masyarakat berbasis keilmuan ekonomi dan bisnis yang berkelanjutan guna memberikan manfaat nyata bagi lingkungan sekitar.</li>
               </ul>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -209,7 +211,7 @@ const About = () => {
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
             {values.map((val, idx) => (
-              <div key={idx} className={`animate-fade-in-up delay-${(idx+1)*100}`} style={{
+              <Reveal key={idx} delay={(idx+1)*100} direction="scale" style={{
                 background: 'linear-gradient(135deg, var(--color-gold), var(--color-gold-hover))',
                 color: 'var(--color-white)',
                 padding: '1rem 2.5rem',
@@ -219,21 +221,13 @@ const About = () => {
                 gap: '0.75rem',
                 fontWeight: 'bold',
                 boxShadow: '0 8px 25px rgba(201, 154, 60, 0.2)',
-                transform: 'translateY(0)',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                cursor: 'pointer'
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0 12px 30px rgba(212, 175, 55, 0.5)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 8px 25px rgba(212, 175, 55, 0.3)';
-              }}
+              className="value-pill"
               >
                 {val.icon}
                 <span style={{ fontSize: '1.1rem', letterSpacing: '0.5px' }}>{val.name}</span>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -275,6 +269,13 @@ const About = () => {
       
       {/* CSS for custom elegant animations */}
       <style>{`
+        .value-pill {
+          transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+        .value-pill:hover {
+          transform: translateY(-5px) scale(1) !important;
+          box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5) !important;
+        }
         .team-card:hover .team-img {
           transform: scale(1.08);
         }
