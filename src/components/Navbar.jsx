@@ -38,27 +38,43 @@ const Navbar = () => {
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Link to="/" style={{ 
-            fontSize: '1.5rem', 
+            fontSize: '1.2rem', 
             fontWeight: 'bold', 
             color: 'var(--color-gold)', 
-            letterSpacing: '2px',
+            letterSpacing: '1px',
             display: 'flex',
             alignItems: 'center',
             gap: '1rem'
           }}>
-            <img 
-              src="/logo.png" 
-              alt="Logo Kabinet Karsa Adhiyasa" 
-              style={{ 
-                height: '40px', 
-                width: 'auto',
-                filter: 'drop-shadow(0 0 10px rgba(200,145,22,0.3))'
-              }} 
-              onError={(e) => {
-                e.target.style.display = 'none'; // Sembunyikan jika file belum ada
-              }}
-            />
-            <span className="text-shimmer" style={{ fontFamily: 'var(--font-heading)' }}>BEM FEB UNIB</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <img 
+                src="/icons.svg" 
+                alt="Logo BEM FEB" 
+                style={{ 
+                  height: '40px', 
+                  width: 'auto',
+                  filter: 'drop-shadow(0 0 10px rgba(212,177,90,0.3))'
+                }} 
+                onError={(e) => e.target.style.display = 'none'}
+              />
+              <img 
+                src="/kabinet-karsa-adhiyasa.jpg" 
+                alt="Logo Kabinet Karsa Adhiyasa" 
+                style={{ 
+                  height: '40px', 
+                  width: '40px',
+                  objectFit: 'cover',
+                  borderRadius: '50%',
+                  border: '1px solid var(--color-gold)',
+                  boxShadow: '0 0 10px rgba(212,177,90,0.3)'
+                }} 
+                onError={(e) => e.target.style.display = 'none'}
+              />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <span className="text-shimmer" style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.2' }}>BEM FEB UNIB</span>
+              <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', fontWeight: 400 }}>Kabinet Karsa Adhiyasa</span>
+            </div>
           </Link>
 
         {/* Desktop Menu */}

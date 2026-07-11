@@ -41,21 +41,6 @@ const Home = () => {
         position: 'relative'
       }}>
         <div className="container animate-fade-in-up" style={{ textAlign: 'center', zIndex: 1 }}>
-          <img 
-            src="/kabinet-karsa-adhiyasa.jpg" 
-            alt="Logo Kabinet Karsa Adhiyasa" 
-            className="animate-float"
-            style={{ 
-              width: '160px', 
-              height: '160px',
-              objectFit: 'cover',
-              objectPosition: 'center',
-              borderRadius: '50%',
-              border: '2px solid var(--color-gold)',
-              boxShadow: '0 10px 30px rgba(212, 177, 90, 0.4)',
-              marginBottom: '2rem'
-            }} 
-          />
           <h1 className="text-shimmer heading-display" style={{ marginBottom: '1.5rem' }}>
             BEM FEB KBM UNIB 2026
           </h1>
