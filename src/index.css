@@ -53,7 +53,8 @@ body {
 
 @keyframes slowPan {
   0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-2%, -2%) scale(1.05); }
+  50% { transform: translate(-1.5%, -1%) scale(1.03); }
+  100% { transform: translate(-2%, -2.5%) scale(1.06); }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -197,12 +198,12 @@ a:hover {
 
 /* Animations */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(30px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
@@ -230,15 +231,16 @@ a:hover {
   to { background-position: 200% center; }
 }
 
-/* Smooth Floating Animation */
+/* Smooth Organic Floating Animation */
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(1.5deg); }
+  66% { transform: translateY(-6px) rotate(-1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
 /* Gentle Float for Cards */
