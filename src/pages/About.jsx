@@ -109,9 +109,9 @@ const MemberCard = ({ member, delay }) => {
 
       <div style={{
         position: 'absolute',
-        bottom: '20px',
-        left: '20px',
-        right: '20px',
+        bottom: 'var(--member-inset, 20px)',
+        left: 'var(--member-inset, 20px)',
+        right: 'var(--member-inset, 20px)',
         zIndex: 3,
         textAlign: 'center',
         padding: 'var(--member-padding, 0.75rem)',
@@ -289,8 +289,9 @@ const About = () => {
         }
         @media (max-width: 480px) {
           .team-card {
-            --member-text-size: 0.5rem;
-            --member-padding: 0.25rem;
+            --member-text-size: 0.6rem;
+            --member-padding: 0.3rem;
+            --member-inset: 5px;
           }
         }
       `}</style>
