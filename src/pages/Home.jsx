@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Briefcase, MessageSquare, Palette, Mic, HeartHandshake } from 'lucide-react';
+import { ArrowRight, Briefcase, MessageSquare, Palette, Mic, HeartHandshake, Users, Flag } from 'lucide-react';
 
 const programs = [
   {
@@ -40,20 +40,40 @@ const Home = () => {
         alignItems: 'center',
         position: 'relative'
       }}>
-        <div className="container animate-fade-in-up" style={{ textAlign: 'center', zIndex: 1 }}>
-          <h1 className="text-shimmer heading-display" style={{ marginBottom: '1.5rem' }}>
+        <div className="container animate-fade-in-up" style={{ textAlign: 'center', zIndex: 1, marginTop: '2rem' }}>
+          <span style={{ color: 'var(--color-gold)', letterSpacing: '2px', fontWeight: 600, fontSize: '0.9rem', textTransform: 'uppercase', marginBottom: '1rem', display: 'block' }}>
+            WELCOME TO
+          </span>
+          <h1 className="text-shimmer heading-display" style={{ marginBottom: '0.5rem', fontFamily: 'var(--font-heading)' }}>
             BEM FEB KBM UNIB 2026
           </h1>
-          <p style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', color: 'var(--color-text-muted)', maxWidth: '800px', margin: '0 auto 3rem auto', fontWeight: 300 }}>
-            Gerakan kolektif mahasiswa yang adaptif, berprestasi, dan berdampak.
+          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: 'var(--color-gold-hover)', fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 400, marginBottom: '1.5rem' }}>
+            Gerakan Kolektif Mahasiswa
+          </h2>
+          <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'var(--color-text-muted)', maxWidth: '750px', margin: '0 auto 3rem auto', fontWeight: 300, lineHeight: 1.8 }}>
+            BEM FEB KBM UNIB adalah organisasi kemahasiswaan yang menjalankan fungsi eksekutif di lingkungan Fakultas Ekonomi dan Bisnis, Universitas Bengkulu. Kami bertujuan untuk aktif, responsif, dan konstruktif melalui berbagai program kerja, pengabdian, dan pelayanan.
           </p>
-          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/about" className="btn-gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem' }}>
-              Kenali Kami Lebih Dekat <ArrowRight size={20} />
+          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '4rem' }}>
+            <Link to="/about" className="btn-gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2.5rem', fontSize: '1.1rem', borderRadius: '50px', boxShadow: '0 10px 25px rgba(212,177,90,0.3)' }}>
+              Our Programs
             </Link>
-            <Link to="/student-info" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem' }}>
-              Info Mahasiswa
-            </Link>
+          </div>
+
+          <div className="grid grid-cols-2" style={{ maxWidth: '800px', margin: '0 auto', gap: '1.5rem' }}>
+            <div className="glass-card" style={{ padding: '1.5rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderRadius: '16px' }}>
+              <div style={{ textAlign: 'left' }}>
+                <h3 style={{ fontSize: '1.8rem', color: 'var(--color-white)', margin: 0 }}>120+</h3>
+                <span style={{ color: 'var(--color-text-muted)' }}>Fungsionaris</span>
+              </div>
+              <Users size={36} color="var(--color-gold)" strokeWidth={1.5} />
+            </div>
+            <div className="glass-card" style={{ padding: '1.5rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderRadius: '16px' }}>
+              <div style={{ textAlign: 'left' }}>
+                <h3 style={{ fontSize: '1.8rem', color: 'var(--color-white)', margin: 0 }}>2026</h3>
+                <span style={{ color: 'var(--color-text-muted)' }}>Periode</span>
+              </div>
+              <Flag size={36} color="var(--color-gold)" strokeWidth={1.5} />
+            </div>
           </div>
         </div>
       </section>

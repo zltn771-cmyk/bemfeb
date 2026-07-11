@@ -38,7 +38,49 @@ const Navbar = () => {
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         
-        {/* Left side: Desktop Menu & Mobile Hamburger */}
+        {/* Left side: Logo */}
+        <Link to="/" style={{ 
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.75rem',
+          textDecoration: 'none'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img 
+              src="/kabinet-karsa-adhiyasa.jpg" 
+              alt="Logo Kabinet" 
+              style={{ 
+                height: '42px', 
+                width: '42px',
+                objectFit: 'cover',
+                borderRadius: '50%',
+                border: '1px solid var(--color-gold)'
+              }} 
+            />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }} className="nav-text-container">
+            <span style={{ 
+              fontFamily: 'var(--font-heading)', 
+              fontSize: '1.2rem', 
+              fontWeight: '700', 
+              color: 'var(--color-white)', 
+              lineHeight: '1.2', 
+              whiteSpace: 'nowrap' 
+            }}>
+              BEM FEB UNIB
+            </span>
+            <span className="nav-subtext" style={{ 
+              fontSize: '0.75rem', 
+              color: 'var(--color-text-muted)', 
+              fontWeight: 500, 
+              whiteSpace: 'nowrap' 
+            }}>
+              Kabinet Karsa Adhiyasa
+            </span>
+          </div>
+        </Link>
+
+        {/* Desktop Menu */}
         <div style={{ display: 'flex', gap: '2rem' }} className="desktop-menu">
           {navLinks.map((link) => (
             <Link 
@@ -54,54 +96,21 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button on Left */}
-        <div className="mobile-menu-btn" style={{ display: 'none', cursor: 'pointer' }} onClick={toggleMenu}>
-          {isOpen ? <X color="var(--color-gold)" /> : <Menu color="var(--color-gold)" />}
+        {/* Right side: Mobile Menu Button */}
+        <div 
+          className="mobile-menu-btn" 
+          style={{ 
+            display: 'none', 
+            cursor: 'pointer',
+            background: 'linear-gradient(135deg, rgba(212,177,90,0.8), rgba(229,194,107,0.4))',
+            padding: '0.5rem',
+            borderRadius: '12px',
+            border: '1px solid rgba(212,177,90,0.3)'
+          }} 
+          onClick={toggleMenu}
+        >
+          {isOpen ? <X color="var(--color-black)" size={28} /> : <Menu color="var(--color-black)" size={28} />}
         </div>
-
-        {/* Right side: Logo */}
-        <Link to="/" style={{ 
-          fontSize: '1rem', 
-          fontWeight: 'bold', 
-          color: 'var(--color-gold)', 
-          letterSpacing: '1px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'flex-end',
-          flex: 1,
-          gap: '0.75rem',
-          textAlign: 'right'
-        }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }} className="nav-text-container">
-            <span className="text-shimmer" style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.2', whiteSpace: 'nowrap' }}>BEM FEB UNIB</span>
-            <span className="nav-subtext" style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontWeight: 400, whiteSpace: 'nowrap' }}>Kabinet Karsa Adhiyasa</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <img 
-              src="/kabinet-karsa-adhiyasa.jpg" 
-              alt="Logo Kabinet Karsa Adhiyasa" 
-              style={{ 
-                height: '38px', 
-                width: '38px',
-                objectFit: 'cover',
-                borderRadius: '50%',
-                border: '1px solid var(--color-gold)',
-                boxShadow: '0 0 10px rgba(212,177,90,0.3)'
-              }} 
-              onError={(e) => e.target.style.display = 'none'}
-            />
-            <img 
-              src="/icons.svg" 
-              alt="Logo BEM FEB" 
-              style={{ 
-                height: '38px', 
-                width: 'auto',
-                filter: 'drop-shadow(0 0 10px rgba(212,177,90,0.3))'
-              }} 
-              onError={(e) => e.target.style.display = 'none'}
-            />
-          </div>
-        </Link>
 
       </div>
 
