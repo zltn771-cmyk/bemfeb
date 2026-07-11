@@ -92,6 +92,40 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Identitas Kabinet */}
+      <section className="section" style={{ background: '#FDFBF7', color: '#1A202C' }}>
+        <div className="container">
+          <div className="grid grid-cols-2" style={{ alignItems: 'center', gap: '4rem' }}>
+            <div className="animate-fade-in-up delay-100" style={{ textAlign: 'center' }}>
+              <img 
+                src="/kabinet-karsa-adhiyasa.jpg" 
+                alt="Logo Kabinet Karsa Adhiyasa" 
+                className="animate-float"
+                style={{ 
+                  width: '100%', 
+                  maxWidth: '450px', 
+                  height: 'auto', 
+                  mixBlendMode: 'multiply',
+                  filter: 'drop-shadow(0 20px 40px rgba(201,154,60,0.15))'
+                }} 
+              />
+            </div>
+            <div className="animate-fade-in-up delay-200">
+              <h2 style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', marginBottom: '1rem', color: '#1A202C', fontWeight: '800', fontFamily: 'var(--font-heading)' }}>
+                Kabinet <span style={{ color: 'var(--color-gold)' }}>Karsa Adhiyasa</span>
+              </h2>
+              <div className="divider" style={{ width: '80px', margin: '0 0 1.5rem 0', background: 'var(--color-gold)' }}></div>
+              <p style={{ fontSize: '1.15rem', lineHeight: 1.8, color: '#444', marginBottom: '1.5rem', fontWeight: 400 }}>
+                <strong>"Karsa"</strong> melambangkan kehendak yang kuat, dedikasi, dan cita-cita luhur mahasiswa untuk membawa perubahan positif yang berdampak nyata.
+              </p>
+              <p style={{ fontSize: '1.15rem', lineHeight: 1.8, color: '#444', fontWeight: 400 }}>
+                <strong>"Adhiyasa"</strong> merepresentasikan sinergi, ketangguhan, keadilan, dan keberanian dalam mengabdi kepada nusa, bangsa, serta almamater Universitas Bengkulu tercinta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Vision & Mission Summary */}
       <section className="section bg-charcoal">
         <div className="container">
