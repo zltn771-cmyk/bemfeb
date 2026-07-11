@@ -157,7 +157,7 @@ const About = () => {
   return (
     <div style={{ paddingTop: '80px', minHeight: '100vh' }}>
       {/* Hero */}
-      <section className="section">
+      <section className="section about-hero">
         <div className="container animate-fade-in-up">
           <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
             <h1 className="text-shimmer heading-display" style={{ marginBottom: '1rem' }}>Tentang BEM FEB KBM UNIB 2026</h1>

@@ -340,6 +340,10 @@ a:hover {
     background: linear-gradient(to bottom, rgba(24,24,27,0.1) 0%, rgba(24,24,27,0.9) 35vw, #18181B 55vw) !important;
   }
 
+  .about-hero {
+    padding-top: 30vh !important;
+  }
+
   .section { padding: 2.5rem 0; }
   .grid { gap: 1rem; }
   .glass-card { padding: 1.25rem 1rem; border-radius: 12px; }

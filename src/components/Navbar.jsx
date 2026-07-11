@@ -65,7 +65,8 @@ const Navbar = () => {
               fontWeight: '700', 
               color: 'var(--color-white)', 
               lineHeight: '1.2', 
-              whiteSpace: 'nowrap' 
+              whiteSpace: 'nowrap',
+              textShadow: '0 2px 10px rgba(0,0,0,0.9)'
             }}>
               BEM FEB UNIB
             </span>
