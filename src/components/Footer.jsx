@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer style={{ background: 'var(--color-bg-alt)', padding: '3rem 0 1rem 0', marginTop: 'auto' }}>
+    <footer style={{ background: 'var(--color-charcoal)', padding: '3rem 0 1rem 0', marginTop: 'auto' }}>
       <div className="container">
         <div className="grid grid-cols-3" style={{ marginBottom: '2rem' }}>
           <div>

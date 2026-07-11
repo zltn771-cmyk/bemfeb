@@ -77,7 +77,7 @@ const MemberCard = ({ member, delay }) => {
         <div style={{
           width: '100%',
           height: '100%',
-          background: 'linear-gradient(135deg, var(--color-white), var(--color-bg-alt))',
+          background: 'linear-gradient(135deg, var(--color-charcoal), var(--color-black))',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -102,7 +102,7 @@ const MemberCard = ({ member, delay }) => {
         left: 0,
         width: '100%',
         height: '70%',
-        background: 'linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.6) 40%, transparent 100%)',
+        background: 'linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, transparent 100%)',
         zIndex: 2,
         pointerEvents: 'none'
       }}></div>
@@ -117,8 +117,8 @@ const MemberCard = ({ member, delay }) => {
         padding: '1rem',
         borderTop: '1px solid rgba(212, 175, 55, 0.3)',
         borderBottom: '1px solid rgba(212, 175, 55, 0.3)',
-        backdropFilter: 'blur(10px)',
-        background: 'rgba(255, 255, 255, 0.85)',
+        backdropFilter: 'blur(5px)',
+        background: 'rgba(0, 0, 0, 0.4)',
         transition: 'all 0.4s ease',
         transform: 'translateY(10px)',
         opacity: 0.9
@@ -199,7 +199,7 @@ const About = () => {
       </section>
 
       {/* Our Values */}
-      <section className="section" style={{ background: 'var(--color-white)' }}>
+      <section className="section" style={{ background: 'var(--color-black)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <h2 className="text-gold" style={{ fontSize: '2.5rem' }}>Nilai Inti (Our Values)</h2>
