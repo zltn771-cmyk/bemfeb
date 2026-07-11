@@ -35,26 +35,28 @@ const Home = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       {/* Hero Section */}
-      <section className="section home-hero" style={{ 
+      <section className="section" style={{ 
         minHeight: '100vh', 
-        display: 'flex',
+        display: 'flex', 
+        alignItems: 'flex-start',
+        paddingTop: '35vh', /* Start right after the photo ends */
         paddingBottom: '2rem',
         position: 'relative'
       }}>
-        <div className="container animate-fade-in-up" style={{ textAlign: 'center', zIndex: 1 }}>
+        <div className="container animate-fade-in-up" style={{ textAlign: 'left', zIndex: 1 }}>
           <span style={{ color: 'var(--color-gold)', letterSpacing: '4px', fontWeight: 600, fontSize: '0.8rem', textTransform: 'uppercase', marginBottom: '0.25rem', display: 'block' }}>
             WELCOME TO
           </span>
-          <h1 style={{ color: 'var(--color-gold)', marginBottom: '0.25rem', fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem, 7vw, 3.5rem)', fontWeight: 700, lineHeight: 1.1 }}>
+          <h1 style={{ color: 'var(--color-gold)', marginBottom: '0.25rem', fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem, 7vw, 4.5rem)', fontWeight: 700, lineHeight: 1.1 }}>
             BEM FEB KBM UNIB 2026
           </h1>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: '#FFF8D6', fontSize: 'clamp(1.1rem, 2.5vw, 1.8rem)', fontWeight: 400, marginBottom: '1.25rem' }}>
+          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: '#FFF8D6', fontSize: 'clamp(1.1rem, 2.5vw, 2.2rem)', fontWeight: 400, marginBottom: '1.25rem' }}>
             Gerakan Kolektif Mahasiswa
           </h2>
-          <p style={{ fontSize: 'clamp(0.85rem, 2vw, 1.1rem)', color: 'var(--color-gray)', maxWidth: '700px', margin: '0 auto 1.5rem auto', fontWeight: 300, lineHeight: 1.6 }}>
+          <p style={{ fontSize: 'clamp(0.85rem, 2vw, 1.2rem)', color: 'var(--color-gray)', maxWidth: '700px', margin: '0 0 1.5rem 0', fontWeight: 300, lineHeight: 1.6 }}>
             BEM FEB KBM UNIB adalah organisasi kemahasiswaan yang menjalankan fungsi eksekutif di lingkungan Fakultas Ekonomi dan Bisnis, Universitas Bengkulu. Kami bertujuan untuk aktif, responsif, dan konstruktif melalui berbagai program kerja, pengabdian, dan pelayanan.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start', flexWrap: 'wrap', marginBottom: '1rem' }}>
             <Link to="/about" style={{ 
               background: 'linear-gradient(135deg, rgba(212,177,90,0.9), rgba(229,194,107,0.7))',
               color: 'var(--color-black)',
@@ -71,7 +73,12 @@ const Home = () => {
               Our Programs
             </Link>
           </div>
+        </div>
+      </section>
 
+      {/* Floating Stats over the Hero Section */}
+      <section style={{ position: 'relative', zIndex: 10, marginTop: '-5rem', paddingBottom: '3rem' }}>
+        <div className="container">
           <Reveal delay={200} className="grid grid-cols-2 grid-cols-2-mobile-keep" style={{ maxWidth: '800px', margin: '0 auto', gap: '1.5rem' }}>
             <div className="glass-card" style={{ padding: '1.5rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderRadius: '16px' }}>
               <div style={{ textAlign: 'left' }}>
@@ -92,11 +99,9 @@ const Home = () => {
       </section>
 
       {/* Vision & Mission Summary */}
-      <section className="section bg-charcoal" style={{ overflow: 'hidden', position: 'relative' }}>
-        <div className="glow-orb" style={{ top: '-10%', left: '-10%' }}></div>
-        <div className="glow-orb" style={{ bottom: '-10%', right: '-10%', animationDelay: '-7s' }}></div>
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <Reveal direction="up" className="glass-card card-float" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
+      <section className="section bg-charcoal">
+        <div className="container">
+          <Reveal direction="up" className="glass-card" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
             <h2 className="text-gold heading-section">Visi Kami</h2>
             <p style={{ fontSize: '1.25rem', color: 'var(--color-text-main)', fontStyle: 'italic', marginBottom: '2.5rem', lineHeight: 1.8 }}>
               "BEM FEB KBM UNIB sebagai gerakan kolektif mahasiswa yang adaptif, berprestasi, dan berdampak bagi kampus serta masyarakat."
@@ -125,7 +130,7 @@ const Home = () => {
                   key={index} 
                   delay={index * 100} 
                   direction="up"
-                  className={`glass-card card-float ${isLarge ? 'bento-large' : ''}`}
+                  className={`glass-card ${isLarge ? 'bento-large' : ''}`}
                   style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
                 >
                   <div style={{ marginBottom: '1.5rem', flexShrink: 0 }}>{prog.icon}</div>

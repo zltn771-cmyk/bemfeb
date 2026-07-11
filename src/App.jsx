@@ -79,9 +79,24 @@ function App() {
         }}
       />
 
-      {/* Ambient Background Glows */}
-      <div className="ambient-glow ambient-glow-1"></div>
-      <div className="ambient-glow ambient-glow-2"></div>
+      {/* Sleek Background Watermark */}
+      <div style={{
+        position: 'fixed',
+        top: '20vh',
+        right: '-10%',
+        width: '70vw',
+        height: '70vw',
+        maxWidth: '800px',
+        maxHeight: '800px',
+        opacity: 0.02,
+        pointerEvents: 'none',
+        zIndex: -5,
+        backgroundImage: 'url("https://lh3.googleusercontent.com/d/1-7RjS10oM9dD7415Yk5K38Yn8X0C5WpY=w1000?authuser=0")',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        filter: 'grayscale(100%)'
+      }}></div>
 
       <div className="bg-animated"></div>
       <div className="bg-overlay"></div>
