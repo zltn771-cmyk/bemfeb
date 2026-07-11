@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Briefcase, MessageSquare, Palette, Mic, HeartHandshake, Users, Flag } from 'lucide-react';
 import Reveal from '../components/Reveal';
+import Marquee from '../components/Marquee';
 
 const programs = [
   {
@@ -52,7 +53,7 @@ const Home = () => {
             Gerakan kolektif mahasiswa yang adaptif, berprestasi, dan berdampak.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1rem' }}>
-            <Link to="/about" style={{ 
+            <Link to="/about" className="btn-shine" style={{ 
               background: 'linear-gradient(135deg, rgba(212,177,90,0.9), rgba(229,194,107,0.7))',
               color: 'var(--color-black)',
               fontWeight: 600,
@@ -85,6 +86,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Infinite Marquee Banner */}
+      <Marquee text="ADAPTIF • BERPRESTASI • BERDAMPAK • KELUARGA KARSA ADHIYASA" />
 
       {/* Floating Stats */}
       <section style={{ position: 'relative', zIndex: 10, paddingBottom: '3rem' }}>

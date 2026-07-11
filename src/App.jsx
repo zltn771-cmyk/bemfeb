@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import StudentInfo from './pages/StudentInfo';
 import Contact from './pages/Contact';
+import Cursor from './components/Cursor';
+import Particles from './components/Particles';
 import './index.css';
 
 // Scroll to top on route change
@@ -61,6 +63,8 @@ function App() {
 
   return (
     <Router>
+      <Cursor />
+      <Particles />
       <Preloader isLoading={isLoading} />
       <ScrollToTop />
       
