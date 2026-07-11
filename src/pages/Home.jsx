@@ -41,20 +41,32 @@ const Home = () => {
         position: 'relative'
       }}>
         <div className="container animate-fade-in-up" style={{ textAlign: 'center', zIndex: 1, marginTop: '2rem' }}>
-          <span style={{ color: 'var(--color-gold)', letterSpacing: '2px', fontWeight: 600, fontSize: '0.9rem', textTransform: 'uppercase', marginBottom: '1rem', display: 'block' }}>
+          <span style={{ color: 'var(--color-gold)', letterSpacing: '3px', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '0.5rem', display: 'block' }}>
             WELCOME TO
           </span>
-          <h1 className="text-shimmer heading-display" style={{ marginBottom: '0.5rem', fontFamily: 'var(--font-heading)' }}>
+          <h1 style={{ color: 'var(--color-gold)', marginBottom: '0.25rem', fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 8vw, 3.5rem)', fontWeight: 700, lineHeight: 1.2 }}>
             BEM FEB KBM UNIB 2026
           </h1>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: 'var(--color-gold-hover)', fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 400, marginBottom: '1.5rem' }}>
+          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: '#FFF8D6', fontSize: 'clamp(1.2rem, 3vw, 1.8rem)', fontWeight: 400, marginBottom: '2rem' }}>
             Gerakan Kolektif Mahasiswa
           </h2>
-          <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'var(--color-text-muted)', maxWidth: '750px', margin: '0 auto 3rem auto', fontWeight: 300, lineHeight: 1.8 }}>
+          <p style={{ fontSize: 'clamp(0.9rem, 2vw, 1.1rem)', color: 'var(--color-gray)', maxWidth: '700px', margin: '0 auto 2.5rem auto', fontWeight: 300, lineHeight: 1.8 }}>
             BEM FEB KBM UNIB adalah organisasi kemahasiswaan yang menjalankan fungsi eksekutif di lingkungan Fakultas Ekonomi dan Bisnis, Universitas Bengkulu. Kami bertujuan untuk aktif, responsif, dan konstruktif melalui berbagai program kerja, pengabdian, dan pelayanan.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '4rem' }}>
-            <Link to="/about" className="btn-gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2.5rem', fontSize: '1.1rem', borderRadius: '50px', boxShadow: '0 10px 25px rgba(212,177,90,0.3)' }}>
+            <Link to="/about" style={{ 
+              background: 'linear-gradient(135deg, rgba(212,177,90,0.9), rgba(229,194,107,0.7))',
+              color: 'var(--color-black)',
+              fontWeight: 600,
+              display: 'inline-flex', 
+              alignItems: 'center', 
+              gap: '0.75rem', 
+              padding: '0.8rem 2rem', 
+              fontSize: '1rem', 
+              borderRadius: '50px', 
+              boxShadow: '0 10px 25px rgba(212,177,90,0.3)',
+              textDecoration: 'none'
+            }}>
               Our Programs
             </Link>
           </div>
