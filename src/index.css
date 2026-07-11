@@ -41,19 +41,19 @@ body {
 .bg-animated {
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 70vh; /* Covers the hero section */
+  height: 100vh; /* Allow full height so photo text isn't cut off */
   background-image: url('https://lh3.googleusercontent.com/d/1NleaBg0Hhi9nvickD9WBUhEo-HzdAMYS=w1920?authuser=0');
   background-size: cover;
-  background-position: center;
+  background-position: top center; /* Keep top anchored so bottom text is visible */
   z-index: -2;
 }
 
 .bg-overlay {
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 70vh;
-  /* Fades from semi-transparent to solid background color to blend seamlessly */
-  background: linear-gradient(to bottom, rgba(24,24,27,0.1) 0%, rgba(24,24,27,0.85) 65%, #18181B 95%, #18181B 100%);
+  height: 100vh;
+  /* Fades smoothly into the background at the very bottom */
+  background: linear-gradient(to bottom, rgba(24,24,27,0.1) 0%, rgba(24,24,27,0.6) 50%, rgba(24,24,27,0.95) 85%, #18181B 100%);
   z-index: -1;
 }
 
