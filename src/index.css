@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Tema murni sesuai pilihan Anda: Hitam Arang & Emas Cerah */
-  --color-bg-main: #1A1A1A; 
-  --color-bg-alt: #222222;
-  --color-text-main: #FFFFFF; 
-  --color-text-muted: #CCCCCC; 
-  --color-gold: #c89116; 
-  --color-gold-hover: #e0a31a; 
-  --color-gold-dark: #a6760f; 
+  /* Tema Elegan Terang (Sesuai Filosofi Logo) */
+  --color-bg-main: #FDFBF7; /* Putih/Cream Lembut */
+  --color-bg-alt: #EBF0F4; /* Biru Abu-Abu Pastel Lembut */
+  --color-text-main: #1A202C; /* Abu-abu Gelap (Bukan Hitam Pekat) */
+  --color-text-muted: #4A5568; 
+  --color-gold: #D4B15A; /* Emas Spesifik dari Referensi */
+  --color-gold-hover: #E5C26B; 
+  --color-gold-dark: #B89642; 
   --color-white: #FFFFFF;
-  --color-black: #000000;
+  --color-black: #1A1A1A;
   
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -47,7 +47,7 @@ body {
 .bg-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to bottom, rgba(26,26,26,0.85) 0%, rgba(10,10,10,0.98) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%, rgba(245,247,250,0.92) 100%);
   z-index: -1;
 }
 
@@ -84,19 +84,19 @@ a:hover {
 
 /* Perfect Smooth Glassmorphism */
 .glass {
-  background: rgba(26, 26, 26, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .glass-card {
-  background: linear-gradient(145deg, rgba(40, 40, 40, 0.9) 0%, rgba(20, 20, 20, 0.95) 100%);
-  border: 1px solid rgba(200, 145, 22, 0.15);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 245, 250, 0.8) 100%);
+  border: 1px solid rgba(212, 177, 90, 0.3); /* Emas tipis */
   border-radius: 24px;
   padding: 2.5rem;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
 }
@@ -107,7 +107,7 @@ a:hover {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   border-radius: 24px;
-  background: radial-gradient(120% 120% at 50% -20%, rgba(200, 145, 22, 0.2), transparent 50%);
+  background: radial-gradient(120% 120% at 50% -20%, rgba(212, 177, 90, 0.1), transparent 50%);
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
@@ -115,8 +115,8 @@ a:hover {
 
 .glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(200, 145, 22, 0.15);
-  border-color: rgba(200, 145, 22, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 0 20px rgba(212, 177, 90, 0.15);
+  border-color: rgba(212, 177, 90, 0.5);
 }
 
 .glass-card:hover::after {
@@ -138,12 +138,12 @@ a:hover {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(200, 145, 22, 0.3);
+  box-shadow: 0 4px 15px rgba(212, 177, 90, 0.3);
 }
 
 .btn-gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(200, 145, 22, 0.5);
+  box-shadow: 0 8px 25px rgba(212, 177, 90, 0.5);
 }
 
 .btn-outline {
@@ -151,7 +151,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: var(--color-gold);
+  color: var(--color-text-main);
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1.05rem;
@@ -163,7 +163,8 @@ a:hover {
 }
 
 .btn-outline:hover {
-  background: rgba(200, 145, 22, 0.1);
+  background: rgba(212, 177, 90, 0.1);
+  color: var(--color-gold);
   transform: translateY(-2px);
 }
 
@@ -216,7 +217,7 @@ a:hover {
   background: linear-gradient(
     to right,
     var(--color-gold) 20%,
-    #FFF 50%,
+    var(--color-gold-dark) 50%,
     var(--color-gold) 80%
   );
   background-size: 200% auto;

@@ -31,9 +31,9 @@ const Navbar = () => {
       width: '100%',
       zIndex: 1000,
       transition: 'all 0.3s ease',
-      background: scrolled ? 'rgba(26, 26, 26, 0.9)' : 'transparent',
+      background: scrolled ? 'rgba(255, 255, 255, 0.9)' : 'transparent',
       backdropFilter: scrolled ? 'blur(10px)' : 'none',
-      borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
+      borderBottom: scrolled ? '1px solid rgba(0, 0, 0, 0.05)' : 'none',
       padding: scrolled ? '1rem 0' : '1.5rem 0'
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -47,7 +47,7 @@ const Navbar = () => {
             gap: '1rem'
           }}>
             <img 
-              src="/logo.png" 
+              src="/icons.svg" 
               alt="Logo Kabinet Karsa Adhiyasa" 
               style={{ 
                 height: '40px', 
@@ -68,8 +68,8 @@ const Navbar = () => {
               key={link.name} 
               to={link.path}
               style={{
-                color: location.pathname === link.path ? 'var(--color-gold)' : 'var(--color-white)',
-                fontWeight: location.pathname === link.path ? 600 : 400
+                color: location.pathname === link.path ? 'var(--color-gold)' : 'var(--color-text-main)',
+                fontWeight: location.pathname === link.path ? 600 : 500
               }}
             >
               {link.name}
@@ -90,7 +90,7 @@ const Navbar = () => {
           top: '100%',
           left: 0,
           width: '100%',
-          background: 'var(--color-charcoal)',
+          background: 'var(--color-white)',
           padding: '1rem',
           display: 'flex',
           flexDirection: 'column',
@@ -103,8 +103,8 @@ const Navbar = () => {
               to={link.path}
               onClick={() => setIsOpen(false)}
               style={{
-                color: location.pathname === link.path ? 'var(--color-gold)' : 'var(--color-white)',
-                fontWeight: location.pathname === link.path ? 600 : 400,
+                color: location.pathname === link.path ? 'var(--color-gold)' : 'var(--color-text-main)',
+                fontWeight: location.pathname === link.path ? 600 : 500,
                 padding: '0.5rem'
               }}
             >

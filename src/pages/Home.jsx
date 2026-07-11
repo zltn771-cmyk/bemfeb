@@ -108,7 +108,7 @@ const Home = () => {
       </section>
 
       {/* Flagship Programs */}
-      <section className="section" style={{ background: 'var(--color-black)' }}>
+      <section className="section" style={{ background: 'var(--color-white)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="animate-fade-in-up delay-100">
             <h2 className="text-gold" style={{ fontSize: '2.5rem' }}>Program Unggulan</h2>
