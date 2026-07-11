@@ -38,46 +38,56 @@ const Home = () => {
       <section className="section" style={{ 
         minHeight: '100vh', 
         display: 'flex', 
-        alignItems: 'flex-start',
-        paddingTop: '35vh', /* Start right after the photo ends */
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingTop: '0', 
         paddingBottom: '2rem',
         position: 'relative'
       }}>
-        <div className="container animate-fade-in-up" style={{ textAlign: 'left', zIndex: 1 }}>
-          <span style={{ color: 'var(--color-gold)', letterSpacing: '4px', fontWeight: 600, fontSize: '0.8rem', textTransform: 'uppercase', marginBottom: '0.25rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
-            WELCOME TO
-          </span>
-          <h1 style={{ color: 'var(--color-gold)', marginBottom: '0.25rem', fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem, 7vw, 4.5rem)', fontWeight: 700, lineHeight: 1.1, textShadow: '0 4px 10px rgba(0,0,0,0.9)' }}>
+        <div className="container animate-fade-in-up" style={{ textAlign: 'center', zIndex: 1, marginTop: '5vh' }}>
+          <h1 style={{ color: 'var(--color-gold)', marginBottom: '0.5rem', fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 7vw, 5rem)', fontWeight: 700, lineHeight: 1.1, textShadow: '0 4px 10px rgba(0,0,0,0.9)' }}>
             BEM FEB KBM UNIB 2026
           </h1>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: '#FFF8D6', fontSize: 'clamp(1.1rem, 2.5vw, 2.2rem)', fontWeight: 400, marginBottom: '1.25rem', textShadow: '0 3px 8px rgba(0,0,0,0.8)' }}>
-            Gerakan Kolektif Mahasiswa
-          </h2>
-          <p style={{ fontSize: 'clamp(0.85rem, 2vw, 1.2rem)', color: 'var(--color-white)', maxWidth: '700px', margin: '0 0 1.5rem 0', fontWeight: 400, lineHeight: 1.6, textShadow: '0 2px 6px rgba(0,0,0,0.9)' }}>
-            BEM FEB KBM UNIB adalah organisasi kemahasiswaan yang menjalankan fungsi eksekutif di lingkungan Fakultas Ekonomi dan Bisnis, Universitas Bengkulu. Kami bertujuan untuk aktif, responsif, dan konstruktif melalui berbagai program kerja, pengabdian, dan pelayanan.
+          <p style={{ fontSize: 'clamp(1rem, 2.5vw, 1.4rem)', color: 'var(--color-white)', maxWidth: '800px', margin: '0 auto 2.5rem auto', fontWeight: 400, lineHeight: 1.6, textShadow: '0 2px 6px rgba(0,0,0,0.9)' }}>
+            Gerakan kolektif mahasiswa yang adaptif, berprestasi, dan berdampak.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start', flexWrap: 'wrap', marginBottom: '1rem' }}>
+          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1rem' }}>
             <Link to="/about" style={{ 
               background: 'linear-gradient(135deg, rgba(212,177,90,0.9), rgba(229,194,107,0.7))',
               color: 'var(--color-black)',
               fontWeight: 600,
               display: 'inline-flex', 
               alignItems: 'center', 
-              gap: '0.5rem', 
-              padding: '0.75rem 2rem', 
-              fontSize: '0.95rem', 
+              padding: '0.85rem 2.5rem', 
+              fontSize: '1.05rem', 
               borderRadius: '50px', 
               boxShadow: '0 8px 20px rgba(212,177,90,0.2)',
-              textDecoration: 'none'
+              textDecoration: 'none',
+              transition: 'transform 0.3s'
             }}>
-              Our Programs
+              Kenali Kami Lebih Dekat
+            </Link>
+            <Link to="/student-info" style={{ 
+              background: 'transparent',
+              color: 'var(--color-white)',
+              border: '2px solid rgba(255,255,255,0.8)',
+              fontWeight: 600,
+              display: 'inline-flex', 
+              alignItems: 'center', 
+              padding: '0.85rem 2.5rem', 
+              fontSize: '1.05rem', 
+              borderRadius: '50px', 
+              textDecoration: 'none',
+              transition: 'all 0.3s'
+            }}>
+              Info Mahasiswa
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Floating Stats over the Hero Section */}
-      <section style={{ position: 'relative', zIndex: 10, marginTop: '-5rem', paddingBottom: '3rem' }}>
+      {/* Floating Stats */}
+      <section style={{ position: 'relative', zIndex: 10, paddingBottom: '3rem' }}>
         <div className="container">
           <Reveal delay={200} className="grid grid-cols-2 grid-cols-2-mobile-keep" style={{ maxWidth: '800px', margin: '0 auto', gap: '1.5rem' }}>
             <div className="glass-card" style={{ padding: '1.5rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderRadius: '16px' }}>
