@@ -323,11 +323,11 @@ a:hover {
 /* Clean Layouts */
 .home-hero {
   align-items: flex-start !important; 
-  padding-top: 55vh; /* Push text down below the faces on desktop */
+  padding-top: 75vh; /* Push text completely below the 70vh photo on desktop */
 }
 
 .about-hero {
-  padding-top: 50vh; /* Push text down below the faces on desktop */
+  padding-top: 75vh; /* Push text completely below the 70vh photo on desktop */
 }
 
 .section {
