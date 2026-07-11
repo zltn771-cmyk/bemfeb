@@ -79,6 +79,10 @@ function App() {
         }}
       />
 
+      {/* Ambient Background Glows */}
+      <div className="ambient-glow ambient-glow-1"></div>
+      <div className="ambient-glow ambient-glow-2"></div>
+
       <div className="bg-animated"></div>
       <div className="bg-overlay"></div>
       
